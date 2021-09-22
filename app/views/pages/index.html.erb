@@ -1,2 +1,19 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Book Code</th>
+            <th>Price</th>        
+        <% if user_signed_in? %>
+            <th colspan="3"></th>
+        <% else %>
+            <th colspan="3"></th>
+        <% end %>
+        </tr>
+    </thead>
+
+    <tbody id="booklist">
+        <%= render @books %>
+    </tbody>
+</table>
