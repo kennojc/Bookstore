@@ -12,3 +12,9 @@ import 'bootstrap'
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+function removeAllChildNodes(parent){
+	while (parent.firstChild) {
+		parent.removeChild(parent.firstChild);
+	}
+};
